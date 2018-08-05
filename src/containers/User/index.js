@@ -4,6 +4,17 @@ import { connect } from 'react-redux'
 
 class User extends Component {
 
+  constructor(props) {
+    super(props)
+
+    console.log(props)
+    const { isAuthenticated } = this.props.auth;
+    // console.log(isAuthenticated())
+    if (!isAuthenticated()){
+      props.history.push('/login')
+    }
+  }
+
   componentDidMount(){
     console.log(this.props)
   }
