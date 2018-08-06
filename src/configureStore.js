@@ -1,8 +1,8 @@
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import { routerMiddleware } from 'react-router-redux';
-import app_reducer from './containers/App/reducers';
-import login_reducer from './containers/Login/reducers';
-import user_reducer from './containers/User/reducers';
+import app_reducer from './reducers/app';
+import login_reducer from './reducers/login';
+import user_reducer from './reducers/user';
 
 import thunk from 'redux-thunk';
 
