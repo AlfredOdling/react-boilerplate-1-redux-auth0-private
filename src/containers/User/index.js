@@ -2,14 +2,13 @@ import React, { Component, PropTypes } from 'react'
 
 import { connect } from 'react-redux'
 
+import * as actions from '../../actions/user'
 class User extends Component {
 
   constructor(props) {
     super(props)
 
-    console.log(props)
     const { isAuthenticated } = this.props.auth;
-    // console.log(isAuthenticated())
     if (!isAuthenticated()){
       props.history.push('/login')
     }
@@ -17,17 +16,27 @@ class User extends Component {
 
   componentDidMount(){
     console.log(this.props)
+    console.log(actions)
   }
 
   render() {
 
     return (
+        <div>
+          <h1>user page</h1>
+          <h2>{this.props.value}</h2>
+          <button onClick={()=>this.props.increment()}>increment</button>
+        </div>
 
-        <h1>user page</h1>
 
     )
   }
 }
+const mapDispatchToProps = (dispatch) => {
+    return {
+        increment: (url) => dispatch(actions.increment())
+    };
+};
 
 function mapStateToProps (state) {
   return {
@@ -35,4 +44,4 @@ function mapStateToProps (state) {
   }
 }
 
-export default connect(mapStateToProps)(User)
+export default connect(mapStateToProps, mapDispatchToProps)(User)

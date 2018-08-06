@@ -8,7 +8,6 @@ import thunk from 'redux-thunk';
 
 export default function configureStore(initialState = {}, history) {
 
-  // const middlewares = [routerMiddleware(history)];
 
   let middlewares = [
     routerMiddleware(history),
@@ -23,12 +22,9 @@ export default function configureStore(initialState = {}, history) {
     user: user_reducer
   })
 
-
   const store = createStore(
     all_reducers,
     compose(...applied_middleware, window.devToolsExtension ? window.devToolsExtension() : f => f)
-
-
   );
 
 
