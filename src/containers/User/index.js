@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from "react";
 
 import { connect } from "react-redux";
-//test
 import * as actions from "../../actions/user";
 class User extends Component {
   constructor(props) {
