@@ -11,8 +11,19 @@ export function  increment() {
 
   };
 }
-export function decrement() {
-  return {
-    type: DECREMENT_USER
+
+export function  decrement() {
+  return async dispatch => {
+
+    let instance = axios.create({
+      baseURL: 'http://localhost:4000/',
+      headers: {
+        'Content-Type': 'application/json',
+        'authorization': `Bearer ${localStorage.getItem('id_token')}`
+      }
+    });
+    let { data } = await instance.get('user');
+    dispatch({type: DECREMENT_USER, payload: data});
+
   };
 }

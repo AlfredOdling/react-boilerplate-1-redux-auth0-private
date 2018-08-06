@@ -7,9 +7,9 @@ export default class Auth {
     autoclose: true,
     auth: {
       redirectUrl: '',
-      responseType: 'token',
+      responseType: 'token id_token',
       params: {
-        scope: 'openid user_metadata'
+        scope: 'openid email user_metadata'
       }
     }
   });
@@ -31,13 +31,17 @@ export default class Auth {
   handleAuthentication() {
     // Add a callback for Lock's `authenticated` event
     this.lock.on('authenticated', (data)=>{
-      
+
       this.lock.hide()
+
+      console.log(data)
+      debugger;
       this.setSession(data)
     });
     // Add a callback for Lock's `authorization_error` event
     this.lock.on('authorization_error', (err) => {
       console.log(err);
+      debugger
       alert(`Error: ${err.error}. Check the console for further details.`);
       // history.replace('/login');
     });
@@ -56,6 +60,7 @@ export default class Auth {
 
       // localStorage.setItem('expires_at', expiresAt);
       // navigate to the home route
+      debugger;
       history.replace('/user');
     }
   }

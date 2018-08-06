@@ -1,6 +1,7 @@
 var jwt = require('express-jwt');
 var jwtDecode = require('jwt-decode');
 var config = require('./config');
+var jwks = require('jwks-rsa');
 
 
 var decode = function(req){
@@ -14,7 +15,17 @@ var decode = function(req){
 }
 
 module.exports = {
-	jwtChecking: jwt({secret: config.jwt.secret, audience: config.jwt.audience}),
+	jwtChecking: jwt({
+    secret: jwks.expressJwtSecret({
+        cache: true,
+        rateLimit: true,
+        jwksRequestsPerMinute: 5,
+        jwksUri: "https://polymath.auth0.com/.well-known/jwks.json"
+    }),
+    audience: '',
+    issuer: "https://polymath.auth0.com/",
+    algorithms: ['RS256']
+	}),
 	decode: function(req){
 		var resp = jwtDecode(decode(req))
 		return resp;

@@ -22,14 +22,16 @@ class User extends Component {
       <div>
         <h1>user page</h1>
         <h2>{this.props.value}</h2>
-        <button onClick={() => this.props.increment()}>increment</button>
+          <button onClick={() => this.props.increment()}>free api</button>
+          <button onClick={() => this.props.decrement()}>protectd url</button>
       </div>
     );
   }
 }
 const mapDispatchToProps = dispatch => {
   return {
-    increment: url => dispatch(actions.increment())
+    increment: url => dispatch(actions.increment()),
+    decrement: url => dispatch(actions.decrement()),
   };
 };
 
