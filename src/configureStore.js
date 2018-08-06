@@ -1,11 +1,10 @@
-import { createStore, applyMiddleware, compose } from 'redux';
+import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import { routerMiddleware } from 'react-router-redux';
 import app_reducer from './containers/App/reducers';
 import login_reducer from './containers/Login/reducers';
 import user_reducer from './containers/User/reducers';
 
 import thunk from 'redux-thunk';
-import { combineReducers } from 'redux'
 
 export default function configureStore(initialState = {}, history) {
 
@@ -27,7 +26,9 @@ export default function configureStore(initialState = {}, history) {
 
   const store = createStore(
     all_reducers,
-    ...applied_middleware
+    compose(...applied_middleware, window.devToolsExtension ? window.devToolsExtension() : f => f)
+
+
   );
 
 
