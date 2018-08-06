@@ -8,6 +8,7 @@ class Login extends Component {
   componentDidMount(){
     console.log(this.props)
     this.props.auth.login()
+
   }
 
   render() {

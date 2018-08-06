@@ -27,7 +27,7 @@ class App extends Component {
         <div>main app</div>
         <hr />
         <Switch>
-          <Route exact path="/" component={Login} />
+          <Route exact path="/" render={(props) => <Login auth={auth} {...props} />} />
           <Route path="/user" render={(props) => <User auth={auth} {...props} />} />
           <Route path="" render={(props) => <Login auth={auth} {...props} />} />
         </Switch>
