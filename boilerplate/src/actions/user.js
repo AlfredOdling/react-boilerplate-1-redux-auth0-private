@@ -1,18 +1,18 @@
 import axios from 'axios';
 
-const INCREMENT_COUNTER = 'INCREMENT_USER';
-const DECREMENT_USER = 'DECREMENT_USER'
+const OPEN_REQUEST = 'OPEN_REQUEST';
+const PROTECTED_REQUEST = 'PROTECTED_REQUEST'
 
 
-export function  increment() {
+export function  open_request() {
   return async dispatch => {
     let { data } = await axios.get('http://localhost:4000');
-    dispatch({type: INCREMENT_COUNTER, payload: data});
+    dispatch({type: OPEN_REQUEST, payload: data});
 
   };
 }
 
-export function  decrement() {
+export function  protected_request() {
   return async dispatch => {
 
     let instance = axios.create({
@@ -23,7 +23,7 @@ export function  decrement() {
       }
     });
     let { data } = await instance.get('user');
-    dispatch({type: DECREMENT_USER, payload: data});
+    dispatch({type: PROTECTED_REQUEST, payload: data.data});
 
   };
 }

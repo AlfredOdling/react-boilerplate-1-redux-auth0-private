@@ -2,6 +2,10 @@ import React, { Component, PropTypes } from "react";
 
 import { connect } from "react-redux";
 import * as actions from "../../actions/user";
+
+import './User.css';
+
+
 class User extends Component {
   constructor(props) {
     super(props);
@@ -20,24 +24,30 @@ class User extends Component {
   render() {
     return (
       <div>
-        <h1>user page</h1>
-        <h2>{this.props.value}</h2>
-          <button onClick={() => this.props.increment()}>free api</button>
-          <button onClick={() => this.props.decrement()}>protectd url</button>
+        <div className="User-title">React + Redux + Thunk + DevTools + Auth0 + Prettier</div>
+
+        <div className="default-font">
+          {this.props.open_data} &nbsp; <button onClick={()=>this.props.open_request()}>Request open data</button>
+        </div>
+
+        <div className="default-font">
+          {this.props.protected_data.email} &nbsp; <button onClick={()=>this.props.protected_request()}>Request secured data</button>
+        </div>
       </div>
     );
   }
 }
 const mapDispatchToProps = dispatch => {
   return {
-    increment: url => dispatch(actions.increment()),
-    decrement: url => dispatch(actions.decrement()),
+    open_request: url => dispatch(actions.open_request()),
+    protected_request: url => dispatch(actions.protected_request()),
   };
 };
 
 function mapStateToProps(state) {
   return {
-    value: state.user
+    open_data: state.user.open_data,
+    protected_data: state.user.protected_data
   };
 }
 

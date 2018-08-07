@@ -5,6 +5,9 @@ export default class Auth {
 
   lock = new Auth0Lock('4A1Rt3SiOnzFXkz4f6hWbexbFQ12MKzX', 'polymath.auth0.com', {
     autoclose: false,
+    languageDictionary: {
+      title: "Template"
+    },
     auth: {
       redirectUrl: 'http://localhost:3000/login',
       responseType: 'token id_token',
@@ -66,7 +69,7 @@ export default class Auth {
     localStorage.removeItem('id_token');
     localStorage.removeItem('expires_at');
     // navigate to the home route
-    // history.replace('/login');
+    history.replace('/login');
   }
 
   isAuthenticated() {

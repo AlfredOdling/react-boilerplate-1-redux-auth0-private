@@ -17,6 +17,7 @@ class App extends Component {
 
 
   componentDidMount(){
+
   }
 
   render() {
@@ -24,6 +25,7 @@ class App extends Component {
 
     return (
       <div>
+        
         <Switch>
           <Route exact path="/login" render={(props) => <Login auth={auth} {...props} />} />
           <Route path="/user" render={(props) => <User auth={auth} {...props} />} />
