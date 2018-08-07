@@ -17,7 +17,6 @@ class App extends Component {
 
 
   componentDidMount(){
-    // this.lock.show();
   }
 
   render() {
@@ -25,8 +24,6 @@ class App extends Component {
 
     return (
       <div>
-        <div>main app</div>
-        <hr />
         <Switch>
           <Route exact path="/login" render={(props) => <Login auth={auth} {...props} />} />
           <Route path="/user" render={(props) => <User auth={auth} {...props} />} />
