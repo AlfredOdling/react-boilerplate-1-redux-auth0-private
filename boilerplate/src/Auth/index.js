@@ -73,12 +73,12 @@ export default class Auth {
   }
 
   isAuthenticated() {
-    // Check whether the current time is past the
-    let expiresAt = localStorage.getItem('access_token');
-    if (expiresAt){
+    let expiresAt = JSON.parse(localStorage.getItem('expires_at'));
+    if (new Date().getTime() < expiresAt){
       return true
     } else {
-      return false
+      this.logout()
+      return false;
     }
   }
 }
