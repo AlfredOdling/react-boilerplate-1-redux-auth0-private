@@ -10,6 +10,9 @@ You can find the most recent version of this guide [here](https://github.com/fac
   - npm start (running node application)
   - npm run sass (running sass compiler)
   
+## Auth0
+You will need to create an own Auth0 user and follow Auth0:s setup instructions.
+  
 ## Deployment with GitHub Pages
 - Initialization:
   in package.json add
