@@ -1,10 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import * as actions from '../../actions/toggleTheme'
+import toggleTheme from '../../actions/toggleTheme'
 import ToggleButton from '../ToggleButton'
 
 const DarkMode = props => {
-  const { toggleTheme, isDarkMode } = props
+  const { isDarkMode } = props
 
   return (
     <div id="dark-mode">
@@ -14,7 +14,7 @@ const DarkMode = props => {
 }
 
 const mapDispatchToProps = dispatch => ({
-  toggleTheme: dispatch(actions.toggleTheme()),
+  toggleTheme: dispatch(toggleTheme()),
 })
 
 function mapStateToProps(state) {
