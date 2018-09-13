@@ -3,12 +3,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
-To run:
+## To run:
 - Install packages:
   - npm i
 - Run simultaneously
   - npm start (running node application)
   - npm run sass (running sass compiler)
+
+## Setup Auth0
+You will need to create your own Auth0 user and follow Auth0:s setup instructions to be able to use the login functionality.
   
 ## Deployment with GitHub Pages
 - Initialization:
@@ -25,7 +28,6 @@ To run:
 
 - Lastly, (optionally) configure the domain
   - You can configure a custom domain with GitHub Pages by adding a CNAME file to the public/ folder.
-
 
 ## Table of Contents
 
