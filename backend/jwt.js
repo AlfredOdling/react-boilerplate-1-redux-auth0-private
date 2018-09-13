@@ -1,17 +1,15 @@
-var jwt = require('express-jwt');
-var jwtDecode = require('jwt-decode');
-var config = require('./config');
-var jwks = require('jwks-rsa');
-
+var jwt = require('express-jwt') 
+var jwtDecode = require('jwt-decode') 
+var config = require('./config') 
+var jwks = require('jwks-rsa') 
 
 var decode = function(req){
 	if (req.headers.authorization && req.headers.authorization.split(' ')[0] === 'Bearer') {
-		  return req.headers.authorization.split(' ')[1];
+		  return req.headers.authorization.split(' ')[1] 
 	} else if (req.query && req.query.token) {
-		return req.query.token;
+		return req.query.token 
 	}
-	return null;
-
+	return null 
 }
 
 module.exports = {
@@ -20,14 +18,14 @@ module.exports = {
         cache: true,
         rateLimit: true,
         jwksRequestsPerMinute: 5,
-        jwksUri: "https://polymath.auth0.com/.well-known/jwks.json"
+        jwksUri: "https://bluelion.eu.auth0.com/.well-known/jwks.json"
     }),
     audience: '',
-    issuer: "https://polymath.auth0.com/",
+    issuer: "https://bluelion.eu.auth0.com",
     algorithms: ['RS256']
 	}),
 	decode: function(req){
 		var resp = jwtDecode(decode(req))
-		return resp;
+		return resp 
 	}
 }

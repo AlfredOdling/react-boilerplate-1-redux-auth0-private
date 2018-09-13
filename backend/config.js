@@ -1,6 +1,6 @@
 module.exports = {
 	jwt: {
-		secret: '1VZfWYRqLH5ImAKVXkn6t6HuhO4hK84SOAqTISalF4ArIdEiXA9IuqyC0qQaGKSv',
+		secret: '8SqnbxIM4izzKMkjVpX0N6lRN-jvK2AKrtWPoZ4bOGguMXf2GqkZF7E5OyacE5cr',
 		audience: 'myapp.hypermedia.cc'
 	}
 }

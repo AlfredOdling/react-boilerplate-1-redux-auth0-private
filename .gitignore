@@ -2,11 +2,8 @@
 
 # dependencies
 /node_modules
-<<<<<<< HEAD
 /backend/node_modules
 /boilerplate/node_modules
-=======
->>>>>>> b63055a339cf282c1688bb5c212c892de05dc5d6
 
 # testing
 /coverage
