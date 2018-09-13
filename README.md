@@ -9,6 +9,23 @@ To run:
 - Run simultaneously
   - npm start (running node application)
   - npm run sass (running sass compiler)
+  
+## Deployment with GitHub Pages
+- Initialization:
+  in package.json add
+  "homepage": "https://myusername.github.io/my-app",
+  
+- (continuously) deployment:
+  - npm run deploy
+  
+- Ensure your project’s settings use gh-pages 
+ <p align="left">
+  <img src="https://camo.githubusercontent.com/22aef6d3f95d8cfe08317f11b161eb9e8c1a6a65/687474703a2f2f692e696d6775722e636f6d2f48556a4572396c2e706e67" width="400" alt="accessibility text">
+</p>
+
+- Lastly, (optionally) configure the domain
+  - You can configure a custom domain with GitHub Pages by adding a CNAME file to the public/ folder.
+
 
 ## Table of Contents
 
