@@ -18,8 +18,10 @@ You can find the most recent version of this guide [here](https://github.com/fac
 - (continuously) deployment:
   npm run deploy
   
- Lastly, ensure your project’s settings use gh-pages
- ![alt text](https://camo.githubusercontent.com/22aef6d3f95d8cfe08317f11b161eb9e8c1a6a65/687474703a2f2f692e696d6775722e636f6d2f48556a4572396c2e706e67)
+ Lastly, ensure your project’s settings use gh-pages 
+ <p align="center">
+  <img src="https://camo.githubusercontent.com/22aef6d3f95d8cfe08317f11b161eb9e8c1a6a65/687474703a2f2f692e696d6775722e636f6d2f48556a4572396c2e706e67" width="100" alt="accessibility text">
+</p>
 
  
 ## Deployment with GitHub Pages
