@@ -3,12 +3,27 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
-To run:
+## To run:
 - Install packages:
   - npm i
 - Run simultaneously
   - npm start (running node application)
   - npm run sass (running sass compiler)
+  
+## Deployment with GitHub Pages
+- Initialization:
+  in package.json add
+  "homepage": "https://myusername.github.io/my-app",
+  
+- (continuously) deployment:
+  npm run deploy
+  
+ Lastly, ensure your project’s settings use gh-pages
+ ![alt text](https://camo.githubusercontent.com/22aef6d3f95d8cfe08317f11b161eb9e8c1a6a65/687474703a2f2f692e696d6775722e636f6d2f48556a4572396c2e706e67)
+
+ 
+## Deployment with GitHub Pages
+
 
 ## Table of Contents
 
