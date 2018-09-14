@@ -7,12 +7,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,800");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300, 800");
 @import url("https://fonts.googleapis.com/css?family=Roboto:300, 400, 800");
-@import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,800");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300, 800");
-@import url("https://fonts.googleapis.com/css?family=Roboto:300, 400, 800");
-@import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,800");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300, 800");
-@import url("https://fonts.googleapis.com/css?family=Roboto:300, 400, 800");
 * {
   margin: 0;
   padding: 0;
@@ -124,101 +118,6 @@ p {
 }
 #sidebar #sidebar-nav .nav-item .nav-inner-item:active {
   background-color: rgba(53, 53, 128, 0.6);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-h {
-  font-family: "Montserrat", sans-serif;
-}
-
-p {
-  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-}
-
-#sidebar #sidebar-header, #sidebar #sidebar-nav .nav-item, #sidebar #sidebar-nav .nav-item .nav-inner-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-.switch input {
-  display: none;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: 0.1s;
-}
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  transition: 0.1s;
-}
-.slider.round {
-  border-radius: 34px;
-}
-.slider.round:before {
-  border-radius: 50%;
-}
-
-input:checked + .slider:before {
-  transform: translateX(26px);
-}
-input:checked + .slider {
-  background-color: #2196F3;
-}
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-h {
-  font-family: "Montserrat", sans-serif;
-}
-
-p {
-  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-}
-
-#sidebar #sidebar-header, #sidebar #sidebar-nav .nav-item, #sidebar #sidebar-nav .nav-item .nav-inner-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#dark-mode {
-  margin: 20px;
 }
 
 /*# sourceMappingURL=app.css.map */

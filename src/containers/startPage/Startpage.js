@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import * as actions from '../../actions/user'
 import Sidebar from '../../components/Sidebar' // eslint-disable-line
-import DarkMode from '../../components/darkMode/DarkMode'
 
 class Startpage extends Component {
   constructor(props) {
@@ -16,21 +15,10 @@ class Startpage extends Component {
     }
   }
 
-  componentDidMount() {
-    // console.log(this.props)
-    // console.log(actions)
-  }
-
   render() {
-    // const { openRequest } = this.props
-    // <button type="button" onClick={() => openRequest()}>
-    //   Request open data
-    // </button>
-
     return (
       <div id="startpage">
         <Sidebar />
-        <DarkMode />
       </div>
     )
   }

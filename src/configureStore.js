@@ -3,7 +3,6 @@ import { routerMiddleware } from 'react-router-redux'
 import thunk from 'redux-thunk'
 import appReducer from './reducers/appReducer'
 import userReducer from './reducers/userReducer'
-import toggleThemeReducer from './reducers/toggleThemeReducer'
 
 export default function configureStore(initialState = {}, history) {
   const middlewares = [routerMiddleware(history), thunk]
@@ -12,7 +11,6 @@ export default function configureStore(initialState = {}, history) {
   const allReducers = combineReducers({
     appReducer,
     userReducer,
-    toggleThemeReducer,
   })
 
   const store = createStore(
