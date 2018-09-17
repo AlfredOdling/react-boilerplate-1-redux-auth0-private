@@ -6,6 +6,8 @@ You can find the most recent version of this guide [here](https://github.com/fac
 ## Using this boilerplate
 https://help.github.com/articles/duplicating-a-repository/
 
+git clone --bare https://github.com/AlfredOdling/react-boilerplate-1-redux-auth0-private.git && cd react-boilerplate-1-redux-auth0-private.git && git push --mirror https://github.com/*exampleuser*/*new-repository*.git && cd .. && rm -rf react-boilerplate-1-redux-auth0-private.git
+
 ## To run:
 - Install packages:
   - npm i
